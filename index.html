@@ -1,0 +1,29 @@
+<!doctype html />
+<head>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="main.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//ajax.aspnetcdn.com/ajax/knockout/knockout-3.0.0.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore.js"></script>
+    <script src="underscore_string.js"></script>
+    <script src="objects.js"></script>
+    <script src="main.js"></script>
+    <title>TSC Scheduler Portal</title>
+</head>
+<body>
+    <div class="container">
+        <h1 data-bind="text: TITLE"></h1>
+        <h3 data-bind="text: question"></h3>
+        <form id="possibleAnswers" data-bind="foreach: possibleAnswers">
+            <div class="answer checkbox">
+                <label class="answer-detail">
+                    <input type="radio" name="answers">
+                    <span data-bind="format: $data"></span>
+                </label>
+            </div>
+        </form>
+        <p id="timer">Time remaining: <span data-bind="text: timer"></span></p>
+        <button class="btn btn-default">Submit</button>
+    </div>
+</body>

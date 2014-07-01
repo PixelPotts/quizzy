@@ -1,0 +1,12 @@
+.answer {
+    margin: 8px 0;
+    width: 200px;
+}
+.answer:hover {
+    background-color: #FFFFDD;
+    cursor: pointer;
+}
+input[type=radio] {
+    margin-right: 10px;
+    cursor: pointer;
+}
